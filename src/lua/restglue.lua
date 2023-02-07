@@ -56,7 +56,11 @@ function doREST(args)
         respsonse_body = table.concat(response)
     end
 
+    if response_body == nil then
+        response_body = "#not set#"
+    end
+
     -- Fix NWNX_Lua_Eval()
     SetLocalInt(oModule,uuid..":code",code)
-    SetLocalString(oModule,uuid..":response",respsonse_body)
+    SetLocalString(oModule,uuid..":response",response_body)
 end
