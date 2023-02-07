@@ -53,7 +53,7 @@ function doREST(args)
     else
         -- http[s].request dumps the response body into a table as chunks
         -- use table.concat to reconstitue the body as a string
-        respsonse_body = table.concat(response)
+        response_body = table.concat(response)
     end
 
     if response_body == nil then
